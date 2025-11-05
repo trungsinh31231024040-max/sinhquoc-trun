@@ -91,6 +91,17 @@ a.btn:hover{background:#f7f3ea;border-color:var(--ring);transform:translateY(-2p
 
 footer{max-width:1100px;margin:26px auto 36px;padding:0 18px;color:#777;font-size:13px;text-align:center}
 small{color:#999}
+
+.card::before,
+.card::after{
+  pointer-events: none;   /* rất quan trọng */
+}
+
+/* đảm bảo vùng nút nằm trên cùng */
+.actions, .actions .btn{
+  position: relative;
+  z-index: 1;
+}
 </style>
 </head>
 <body>
